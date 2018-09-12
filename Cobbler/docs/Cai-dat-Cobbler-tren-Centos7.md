@@ -1,19 +1,17 @@
 # 4.Cài đặt Cobbler trên Centos 7
 
 # MỤC LỤC
-- [4.1.Mô hình](#4.1)
-- [4.2.Cài đặt và cấu hình Cobbler](#4.2)
-        - [4.2.1.Cài đặt EPEL-repo](#4.2.1)
-	- [4.2.2.Cài đặt Cobbler và các package cần thiết](#4.2.2)
-	- [4.2.3.Kích hoạt các dịch vụ](#4.2.3)
-	- [4.2.4.Cấu hình Cobbler](#4.2.4)
-	- [4.2.5.Truy cập vào giao diện Web](#4.2.5)
-	- [4.2.6.Chú ý](#4.2.6)
-- [4.3.Scripts cài đặt Cobbler trên Centos 7](#4.3)
+  - [4.1.Mô hình](#41mô-hình)
+  - [4.2.Cài đặt và cấu hình Cobbler](#42cài-đặt-và-cấu-hình-cobbler)
+    - [4.2.1.Cài đặt EPEL-repo](#421cài-đặt-epel-repo)
+    - [4.2.2.Cài đặt Cobbler và các package cần thiết](#422cài-đặt-cobbler-và-các-package-cần-thiết)
+    - [4.2.3.Kích hoạt các dịch vụ](#423kích-hoạt-các-dịch-vụ)
+    - [4.2.4.Cấu hình Cobbler](#424cấu-hình-cobbler)
+    - [4.2.5.Truy cập vào giao diện Web](#425truy-cập-vào-giao-diện-web)
+    - [4.2.6.Chú ý](#426chú-ý)
+  - [4.3.Scripts cài đặt Cobbler trên Centos 7](#43scripts-cài-đặt-cobbler-trên-centos-7)
 
 
-
-<a name="4.1"></a>
 
 ## 4.1.Mô hình
 <img src="../images/cai-dat-cobbler-centos7-1.png" />
@@ -21,11 +19,9 @@
 \- Bài lab thực hiện trên server cài đặt ảo hóa qemu-kvm với Cobbler, Client 1 và Client 2 là các máy ảo.  
 \- Chú ý tắt DHCP server của mạng `172.16.69.0/24`.  
 
-<a name="4.2"></a>
+
 
 ## 4.2.Cài đặt và cấu hình Cobbler
-<a name="4.2.1"></a>
-
 ### 4.2.1.Cài đặt EPEL-repo
 \- Epel-repo (Extra Packages for Enterprise Linux) là một dự án repository từ Fedora team cung cấp rất nhiều gói add-on package mà chúng ta thường dùng cho các bản Linux bao gồm CentOS, RHEL (Red Hat Enterprise Linux) và Scientific Linux.  
 Cài đặt Epel-repo thực hiện lệnh sau:  
@@ -33,8 +29,6 @@ Cài đặt Epel-repo thực hiện lệnh sau:
 yum update -y
 yum install epel-release
 ```
-
-<a name="4.2.2"></a>
 
 ### 4.2.2.Cài đặt Cobbler và các package cần thiết
 \- Cài các package cần thiết:  
@@ -50,8 +44,6 @@ Trong đó:
 \- `debmirror`: gói phần mềm cài đặt cho phép tạo một mirror server chứa các gói phần mềm cài đặt của các distro trên một server local (ở đây cài luôn lên cobbler)  
 \- `pykickstart` : thư việc python cho phép đọc và chỉnh sửa nội dung file kickstart, hỗ trợ cobbler chỉnh sửa file kickstart thông qua giao diện web.  
 \- `fence-agents-all` : Red Hat fence agents are a collection of scripts to handle remote power management for cluster devices. They allow failed or unreachable cluster nodes to be forcibly restarted and removed from the cluster.  
-
-<a name="4.2.3"></a>
 
 ### 4.2.3.Kích hoạt các dịch vụ
 \- Kích hoạt và khởi động các dịch vụ cobblerd và httpd:  
@@ -90,8 +82,6 @@ firewall-cmd --add-port=69/udp --permanent
 firewall-cmd --add-port=4011/udp --permanent
 firewall-cmd --reload
 ```
-
-<a name="4.2.4"></a>
 
 ### 4.2.4.Cấu hình Cobbler
 \- **Thực hiện sửa file cấu hình của Cobbler, file cấu hình `Cobbler /etc/cobbler/settings`:**  
@@ -211,8 +201,6 @@ cobbler sync
 systemctl enable dhcpd
 ```
 
-<a name="4.2.5"></a>
-
 ### 4.2.5.Truy cập vào giao diện Web
 Sau khi hoàn thành các bước trên, truy cập vào giao diện web của Cobbler như sau (lưu ý: sử dụng `https`):  
 ```
@@ -223,8 +211,6 @@ https://172.16.69.21/cobbler_web/
 
 Đăng nhập với tài khoản mặc định có username là `cobbler`, mật khẩu là `cobbler` .
 
-<a name="4.2.6"></a>
-
 ### 4.2.6.Chú ý
 \- Nếu Centos server, đã cài `libvirt` và có một vào mạng được tạo. Ta cần phải xóa tất cả các mạng đó, để tránh xung đột với `dnsmasq` do `libvirt` quản lý.  
 \- Muốn restart lại dịch vụ **cobbler**, sử dụng lệnh:  
@@ -232,7 +218,6 @@ https://172.16.69.21/cobbler_web/
 systemctl restart cobblerd
 ```
 
-<a name="4.3"></a>
 
 ## 4.3.Scripts cài đặt Cobbler trên Centos 7
 \- File `cobbler-install.sh`, link: [Scripts cài Cobbler trên Centos 7](../scripts/cobbler-install.sh)  

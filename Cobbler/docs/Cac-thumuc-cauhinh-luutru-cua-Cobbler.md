@@ -10,8 +10,6 @@
     - [5.5.2.Thư mục boot tftp](#552thư-mục-boot-tftp)
 
 
-<a name="5.1"><a>
-
 ## 5.1.Cấu hình 
 \- Cấu hình cobbler, thư mục `/etc/cobbler`. Trong đó:  
 - File cấu hình chính: `/etc/cobbler/settings`
@@ -20,20 +18,14 @@
 - File thiết lập các modules: `/etc/cobbler/modules.conf`
 - File thiết lập quyền của người dùng: `/etc/cobbler/users.conf`
 
-<a name="5.2"><a>
-
 ## 5.2.Repo dữ liệu
 \- Repo dữ liệu cobbler, thư mục `/var/www/cobbler` . Các distros được imported, repos mirrored, các repo được sinh ra, cac files kickstart được sinh ra đều được đặt trong này. Trong đó:  
 - Thư mục `images`: Kernel và initrd của tất cả các distro được imported.
 - Thư mục `ks_mirror` : Mirrors của tất cả các distros được imported.
 - Thư mục `repo_mirror` : Mirrors của tất cả các repo được định nghĩa.
 
-<a name="5.3"><a>
-
 ## 5.3.Log
 \- Log của cobbler, thư mục `/var/log/cobbler`. File main log là `/var/log/cobbler/cobbler.log` .  
-
-<a name="5.4"><a>
 
 ## 5.4.Cobbler data
 \- Thư mục `/var/lib/cobbler`. Tất cả cấu hình của Cobbler về profiles, systems, distros đều được  đặt trong thư mục này. Backup nó, dữ liệu cobbler của bạn sẽ an toàn (ngoại trừ distros và repos trong thư mục `/var/www/cobbler` )  
@@ -44,12 +36,7 @@
 - `triggers/` : Thư mục bạn có thể đặt scripts để thực thi triggers trên một số thao tác nhất định.
 - `kickstarts/` : Thư mục chứa các kickstarts templates.
 
-<a name="5.5"><a>
-
 ## 5.5.Một số thư mục cần chú ý khác
-
-<a name="5.5.1"><a>
-
 ### 5.5.1.Các thư mục được apache web server mapping
 \- Show nội dung file `/etc/httpd/conf.d/cobbler.conf` :  
 
@@ -88,9 +75,7 @@ Từ đó, từ client ta nên truy cập vào repo trên Cobbler server thông 
 http://<IP_address>/cblr/links/
 ```
 
-<a name="5.5.2"><a>
-
-### 5.5.2.Thư mục boot   tftp   
+### 5.5.2.Thư mục boot tftp
 \- Thư mục boot của tftp : `/var/lib/tftpboot/` .
 \- Trong đó file `/var/lib/tftpboot/pxelinux.cfg/default` là main file là giao diện cho các Client khi chọn boot.
 
