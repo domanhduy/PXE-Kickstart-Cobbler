@@ -52,7 +52,7 @@
 ### 5.5.1.Các thư mục được apache web server mapping
 \- Show nội dung file `/etc/httpd/conf.d/cobbler.conf` :  
 
-<img src="cac-thumuc-cauhinh-luutru-1.png" />
+<img src="../images/cac-thumuc-cauhinh-luutru-1.png" />
 
 \- Với 2 dòng:  
 ```
