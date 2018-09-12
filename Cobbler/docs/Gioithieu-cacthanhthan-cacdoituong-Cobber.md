@@ -2,21 +2,16 @@
 
 
 
-<a name="1"></a>
 
 # 1.Giới thiệu Cobbler
 \- Cobbler là một gói công cụ tiện ích cho phép triển khai hoàn chỉnh một máy chủ PXE server với khả năng cài đặt tự động các phiên bản Linux thông qua môi trường mạng đồng thời hỗ trợ kết hợp tính năng của file kickstart cho phép tự động hóa hoàn toàn quy trình cài đặt, loại bỏ hẳn các thao tác trả lời không cần thiết trong quá trình triển khai.  
 \- Bên cạnh đó, Cobbler còn có thể giúp đỡ trong việc cung cấp, quản lý DNS và DHCP, cập nhật gói, quản lý năng lượng, sắp xếp quản lý cấu hình và nhiều tính năng nữa.  
-
-<a name="2"></a>
 
 # 2.Các thành phần của Cobbler
 \- Cobbler kết nối và tự động hóa nhiều công đoạn khác nhau trong quá trình cài đặt Linux, giúp cho người quản trị dễ dàng hơn trong việc cài đặt số lượng lớn hệ điều hành Linux với những cấu hình khác nhau.  
 \- Các thành phần chính của Cobbler cũng tương tự như của một PXE server bình thường: TFTP server, DHCP server, Kickstart file. Bên cạnh đó, Cobbler còn có thêm một số tính năng nổi bật như:  
 - Web server: cung cấp giao diện web tương tác cho người quản trị, thông qua đó quản lý các profile cũng như các máy trạm được cài đặt.
 - DNS server: Quản lý miền dịch vụ của các máy client. (Không bắt buộc phải có như DHCP)
-
-<a name="3"></a>
 
 # 3.Các đối tượng trong Cobbler
 \- Distro: Đại diện cho một hệ điều hành. Nó chứa các thông tin về kernel và initrd, thêm vào đó là các dữ liệu khác như các thông số của kernel.  
