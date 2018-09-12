@@ -12,7 +12,7 @@
 
 
 
-<a name="4.1"></a>
+
 
 ## 4.1.Mô hình
 <img src="../images/cai-dat-cobbler-centos7-1.png" />
