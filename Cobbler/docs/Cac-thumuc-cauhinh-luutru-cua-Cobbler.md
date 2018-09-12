@@ -1,13 +1,14 @@
 # 5.Các thư mục cấu hình, lưu trữ của Cobbler
 
 # MỤC LỤC
-- [5.1.Cấu hình](#5.1)
-- [5.2.Repo dữ liệu](#5.2)
-- [5.3.Log](#5.3)
-- [5.4.Cobbler data](#5.4)
-- [5.5.Một số thư mục cần chú ý khác](#5.5)
-    - [5.5.1.Các thư mục được apache web server mapping](#5.5.1)
-    - [5.5.2.Thư mục boot tftp](#5.5.2)
+  - [5.1.Cấu hình](#51cấu-hình)
+  - [5.2.Repo dữ liệu](#52repo-dữ-liệu)
+  - [5.3.Log](#53log)
+  - [5.4.Cobbler data](#54cobbler-data)
+  - [5.5.Một số thư mục cần chú ý khác](#55một-số-thư-mục-cần-chú-ý-khác)
+    - [5.5.1.Các thư mục được apache web server mapping](#551các-thư-mục-được-apache-web-server-mapping)
+    - [5.5.2.Thư mục boot tftp](#552thư-mục-boot-tftp)
+
 
 <a name="5.1"><a>
 
