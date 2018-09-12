@@ -1,14 +1,15 @@
 # 4.Cài đặt Cobbler trên Centos 7
 
 # MỤC LỤC
-- [4.1.Mô hình](#4.1)
-- [4.2.Cài đặt và cấu hình Cobbler](#4.2)
-    - [4.2.1.Cài đặt EPEL-repo](#4.2.1)
-    - [4.2.2.Cài đặt Cobbler và các package cần thiết](#4.2.2)
-    - [4.2.3.Kích hoạt các dịch vụ](#4.2.3)
-    - [4.2.4.Cấu hình Cobbler](#4.2.4)
-    - [4.2.5.Truy cập vào giao diện Web](#4.2.5)
-    - [4.2.6.Chú ý](#4.2.6)
+- [4.1.Mô hình](#4.1.mô-hình)
+- [4.2.Cài đặt và cấu hình Cobbler](#4.2.cài-đặt-và-cấu-hình-cobbler)
+	- [4.2.1.Cài đặt EPEL-repo](#4.2.1.cài-đặt-epel-repo)
+	- [4.2.2.Cài đặt Cobbler và các package cần thiết](#4.2.2.cài-đặt-cobbler-và-các-package-cần-thiết)
+	- [4.2.3.Kích hoạt các dịch vụ](#4.2.3.kích-hoạt-các-dịch-vụ)
+	- [4.2.4.Cấu hình Cobbler](#4.2.4.cấu-hình-cobbler)
+	- [4.2.5.Truy cập vào giao diện Web](#4.2.5.truy-cập-vào-giao-diện-web)
+	- [4.2.6.Chú ý](#4.2.6.chú-ý)
+
 
 
 <a name="4.1"></a>
