@@ -3,12 +3,13 @@
 # MỤC LỤC
 - [4.1.Mô hình](#4.1)
 - [4.2.Cài đặt và cấu hình Cobbler](#4.2)
-	- [4.2.1.Cài đặt EPEL-repo](#4.2.1)
+        - [4.2.1.Cài đặt EPEL-repo](#4.2.1)
 	- [4.2.2.Cài đặt Cobbler và các package cần thiết](#4.2.2)
 	- [4.2.3.Kích hoạt các dịch vụ](#4.2.3)
 	- [4.2.4.Cấu hình Cobbler](#4.2.4)
 	- [4.2.5.Truy cập vào giao diện Web](#4.2.5)
 	- [4.2.6.Chú ý](#4.2.6)
+- [4.3.Scripts cài đặt Cobbler trên Centos 7](#4.3)
 
 
 
@@ -229,6 +230,22 @@ https://172.16.69.21/cobbler_web/
 \- Muốn restart lại dịch vụ **cobbler**, sử dụng lệnh:  
 ```
 systemctl restart cobblerd
+```
+
+<a name="4.3"></a>
+
+## 4.3.Scripts cài đặt Cobbler trên Centos 7
+\- File `cobbler-install.sh`, link: [Scripts cài Cobbler trên Centos 7](../scripts/cobbler-install.sh)  
+\- Hướng dẫn sử dụng. Thực hiện các lệnh sau với quyền `root` :  
+- Set quyền cho file bash shell:  
+```
+chmod 755 cobbler-install.sh
+```
+
+- Thay đổi giá trị của biến trong file bash shell sao cho phù hợp mô hình.  
+- Thực hiện lệnh sau để hoàn tất:  
+```
+bash cobbler-install.sh
 ```
 
 
