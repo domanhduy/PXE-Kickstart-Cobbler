@@ -74,6 +74,7 @@ Muốn hệ thống ko hỏi, ta phải chỉ định thuộc tính `interface` 
 
 ## 2.4.netboot image
 \- Nội dung trong  netboot image ( install/netboot) bao gồm:  
+
 |File|Content|
 |---|---|
 |pxelinux.0|boot file image|
