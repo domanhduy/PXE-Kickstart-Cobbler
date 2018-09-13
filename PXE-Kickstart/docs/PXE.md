@@ -20,10 +20,10 @@
 \- PXE miêu tả môi trường client-server để boot phần mềm được lấy từ mạng trên client có hỗ trợ PXE. Trên phía client, yêu cầu NIC có hỗ trợ PXE, và sử dụng 1 bộ giao thức mạng tiêu chuẩn bao gồm DHCP và TFTP (TFTP là giao thức truyền files, thực thi trên giao thức UDP/IP sử dụng port 69).  
 \- PXE thường được sử dụng để booting OS, cài đặt và triển khai.  
 
-<img scr="../images/pxe-1.png" />
+<img src="../images/pxe-1.png" />
 
 ## 1.2.PXE workflow
-<img scr="../images/pxe-2.png" />
+<img src="../images/pxe-2.png" />
 
 \- Bước 1: Hệ thống BIOS boot up và xác định thứ tự boot.  
 \- Bước 2: Nếu thứ tự boot đặt PXE trước hard disk, hoặc flash drives, hoặc CD-ROM, hoặc nếu không có thiết bị nào trong số đó, Universal Network Driver Interface (UNDI) sẽ được load từ NIC. NIC có driver điều khiển thiết bị mạng nhỏ và thực thi TFTP.  
@@ -36,7 +36,7 @@
 
 ## 1.3.LAB PXE
 ### 1.3.1.Mô hình
-<img scr="../images/pxe-3.png" />
+<img src="../images/pxe-3.png" />
 
 \- PXE Server:  
 - Cài hệ điều hành Ubuntu Server 16.04.
@@ -166,6 +166,6 @@ cp -r /mnt /var/www/html/ubuntu-16.04
 #### 1.3.2.2.Trên Client 1
 \- Yêu cầu NIC hỗ trợ boot bằng PXE.  
 \- Chọn boot từ PXE.  
-<img scr="../images/pxe-4.png" />
+<img src="../images/pxe-4.png" />
 
 
