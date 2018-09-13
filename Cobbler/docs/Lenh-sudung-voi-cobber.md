@@ -63,17 +63,43 @@ cobbler profile getks --name CentOS7-x86_64
 ```
 
 ## 7.3.User
+\- Mặc định, ban đầu Cobbler có người dùng quản trị là `cobbler` và mật khẩu là `cobbler`. Việc này không đảm bảo tính bảo mật của hệ thống. Nên tạo một người dùng mới cho hệ thống của bạn và dùng mật khẩu mà chỉ người quản trị mới biết được. Đồng thời xóa người dùng `cobbler` mặc định đi.  
+\- Thông tin về các tài khoản của người dùng được lưu trong file `/etc/cobbler/users.digest` .  
+Mặc định ban đầu nội dung file như sau:  
+<img src="../images/Lenh-sudung-voi-cobbler-2.png" />
+ 
+\- Thêm tài khoản mới cho hệ thống, ta sử dụng lệnh:  
+```
+htdigest /etc/cobbler/users.digest "Cobbler" <user_name>
+```
 
+lưu ý: user_name chưa tồn tại trên hệ thống.  
+Sau đó nhập password vào thiết lập mật khấu cho tài khoản mới thêm. Sau khi thêm tài khoản mới, kiểm tra lại tài khoản mới đã có chưa trong file `/etc/cobbler/users.digest` .  
+Khởi động lại cobbler:  
+```
+systemctl restart cobblerd
+cobbler sync
+```
 
+\- Xóa tài khoản, ta comment hoặc xóa tài khoản trong file `/etc/cobbler/users.digest` .  
+Khởi động lại cobbler:  
+```
+systemctl restart cobblerd
+cobbler sync
+```
 
+\- Đổi mật khẩu tài khoản đã tồn tại trên hệ thống, ta sử dụng lệnh:  
+```
+htdigest /etc/cobbler/users.digest "Cobbler" <user_name>
+```
 
-
-
-
-
-
-
-
+lưu ý: user_name là tài khoản cần đổi mật khẩu trên hệ thống.  
+Sau đó nhập password vào thiết lập mật khấu mới cho tài khoản này.  
+Khởi động lại cobbler:  
+```
+systemctl restart cobblerd
+cobbler sync
+```
 
 
 

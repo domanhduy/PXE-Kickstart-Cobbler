@@ -10,6 +10,7 @@ Tài liệu về Cobbler.
 - [6.Các thao tác với Cobbler](docs/Cac-thao-tac-voi-Cobber.md)
 - [7.Lệnh sử dụng với Cobbler](docs/Lenh-sudung-voi-cobber.md)
 - [8.LAB](docs/LAB.md)
+- [Tài liệu tham khảo](docs/Tai-lieu-tham-khao.md)
 
 
 
