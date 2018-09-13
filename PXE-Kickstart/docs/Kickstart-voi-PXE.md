@@ -1,4 +1,4 @@
-# 2. Kickstart với PXE
+# 2.Kickstart với PXE
 
 # MỤC LỤC
   - [2.1.Giới thiệu](#21giới-thiệu)
