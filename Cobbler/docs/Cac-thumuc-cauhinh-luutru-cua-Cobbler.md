@@ -76,8 +76,8 @@ http://<IP_address>/cblr/links/
 ```
 
 ### 5.5.2.Thư mục boot tftp
-\- Thư mục boot của tftp : `/var/lib/tftpboot/` .
-\- Trong đó file `/var/lib/tftpboot/pxelinux.cfg/default` là main file là giao diện cho các Client khi chọn boot.
+\- Thư mục boot của tftp : `/var/lib/tftpboot/` .  
+\- Trong đó file `/var/lib/tftpboot/pxelinux.cfg/default` là main file là giao diện cho các Client khi chọn boot.  
 
 
 
