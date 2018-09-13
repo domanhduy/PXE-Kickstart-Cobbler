@@ -86,6 +86,7 @@ https://help.ubuntu.com/lts/installation-guide/armhf/apbs02.html#ftn.idm45569767
 ### 3.2.4.Aliases dùng với preseeding
 \- Aliases có thể được sử dụng cho preseeding (auto mode).  
 VD: auto=true và interface=eth0.  
+
 |||
 |---|---|
 |priority|debconf/priority|
