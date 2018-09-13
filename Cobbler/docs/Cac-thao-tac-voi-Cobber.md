@@ -1,6 +1,11 @@
 # 6.Các thao tác với Cobbler
 
 # MỤC LỤC
+  - [6.1.Giới thiệu giao diện web của Cobbler](#61giới-thiệu-giao-diện-web-của-cobbler)
+  - [6.2.Import các hệ điều hành vào Cobbler](#62import-các-hệ-điều-hành-vào-cobbler)
+  - [6.3.Tạo file kickstart](#63tạo-file-kickstart)
+  - [6.4.Tạo profiles](#64tạo-profiles)
+
 
 ## 6.1.Giới thiệu giao diện web của Cobbler
 \- Giao diện tổng quan  
