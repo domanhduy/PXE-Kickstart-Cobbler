@@ -73,7 +73,7 @@ cobbler import --arch=x86_64 --path=/mnt/ubuntu1604 --name=Ubuntu1604
 thì tên của distro tạo ra là sự kết hợp của tùy chọn `--name` và `--arch`. Mẫu tên sẽ là `<name>-<arch>`  .  
 Trong trường hợp trên tên distro sẽ là `Ubuntu1604- x86_64`.   
 ###  6.1.3.Xóa những gì đã imported
-\- Ta xóa distros, profiles, repo đã được tạo ra.
+\- Ta xóa distros, profiles, repo đã được tạo ra.  
 Chú ý: Xóa profiles trước khi xóa distros.  
 
 ## 6.2.Tạo file kickstart
