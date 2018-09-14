@@ -11,6 +11,7 @@ Tài liệu về Cobbler.
 ](docs/Cac-thaotac-quantrong-voi-Cobber.md)
 - [7.Các thao tác khác với Cobbler](docs/Cac-thatac-khac-voi-Cobber.md)
 - [8.LAB](docs/LAB.md)
+- [9.Snippets](docs/Snippets.md)
 - [Tài liệu tham khảo](docs/Tai-lieu-tham-khao.md)
 
 
