@@ -84,8 +84,7 @@ Trường "Kernel Options" có nội dung: `interface=eth0 biosdevname=0 net.ifn
 ### b.Centos 7
 \- Tạo file `centos7-1804.ks` trong thư mục `/var/www/cobbler/kickstarts` với nội dung như file:  
 - [centos7-1804.ks](../Kickstart/centos7-1804.ks) nếu cài đặt phân vùng ổ cứng theo standard.
-
-- [centos7-1804-lvm.ks](../Kickstart/centos7-1804 -lvm.ks) nếu cài đặt phân vùng ổ cứng theo LVM.
+- [centos7-1804-lvm.ks](../Kickstart/centos7-1804-lvm.ks) nếu cài đặt phân vùng ổ cứng theo LVM.
 
 \- Tạo profile tên `Centos7-auto`, với cấu hình như sau:  
 <img src="../images/lab-4.png" />
