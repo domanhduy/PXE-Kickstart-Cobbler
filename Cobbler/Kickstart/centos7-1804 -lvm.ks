@@ -24,9 +24,11 @@ bootloader --location=mbr
 #Partition clearing information
 clearpart --all
 #Basic disk partition
-part / --fstype ext4 --size 5 --grow --asprimary --ondisk=vda
-part swap --size 1024 --ondisk=vda
-part /boot --fstype ext4 --size 1024 --ondisk=vda
+part /boot --fstype xfs --size 1024 --ondisk=vda
+part pv.01 --size=5 --grow --asprimary --ondisk=vda
+volgroup vg1 pv.01
+logvol swap --fstype="swap" --name=centos-swap --vgname=vg1 --size=2048
+logvol / --fstype=xfs --name=centos-root --vgname=vg1 --size=5 --grow
 
 #Use text mode install
 text

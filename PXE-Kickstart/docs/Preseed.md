@@ -468,7 +468,69 @@ mkdir test
 
 \- File kickstart cho Centos 7:  
 Tạo file `/var/www/html/kscentos.cfg` với nội dung như sau:  
+```
+#Generic Kickstart template for Centos 7
+#Platform: x86 and x86-64
 
+#System language
+lang en_US
+
+#System keyboard
+keyboard us
+
+#System timezone
+timezone Asia/Ho_Chi_Minh
+
+#Root password
+rootpw son123456
+
+# Creates a new user on the system
+user centos --name=centos --password=son123456
+
+#System authorization infomation
+auth  --useshadow  --enablemd5 
+
+#System bootloader configuration
+bootloader --location=mbr
+#Partition clearing information
+clearpart --all
+#Basic disk partition
+part / --fstype ext4 --size 5 --grow --asprimary --ondisk=vda
+part swap --size 1024 --ondisk=vda
+part /boot --fstype ext4 --size 1024 --ondisk=vda
+
+#Use text mode install
+text
+
+# Firewall configuration
+firewall --enabled
+# SELinux configuration
+selinux --disabled
+
+#Network information
+#network --bootproto=dhcp --device=eth0 --onboot=on
+
+# config repo source.list
+url --url http://172.16.69.101/centos7
+
+# Do not configure the X Window System
+skipx
+
+#Reboot after installation
+reboot
+
+#Install packages
+%packages --ignoremissing
+
+%end
+
+#Run command when system installation is complete
+%post
+yum update -y
+cd /root
+mkdir test
+%end
+```
 
 #### 3.5.2.2.Trên Client 1
 \- Yêu cầu NIC hỗ trợ boot bằng PXE.  
