@@ -86,6 +86,24 @@ Trường "Kernel Options" có nội dung: `interface=eth0 biosdevname=0 net.ifn
 - [centos7-1804.ks](../Kickstart/centos7-1804.ks) nếu cài đặt phân vùng ổ cứng theo standard.
 - [centos7-1804-lvm.ks](../Kickstart/centos7-1804-lvm.ks) nếu cài đặt phân vùng ổ cứng theo LVM.
 
+Chú ý: Khi viết file kickstart cài centos theo LVM. Đoạn cấu hình LVM:  
+```
+#System bootloader configuration
+bootloader --location=mbr
+#Partition clearing information
+clearpart --all
+#Basic disk partition
+part /boot --fstype xfs --size 1024 --ondisk=vda
+part pv.01 --size=5 --grow --asprimary --ondisk=vda
+volgroup vg1 pv.01
+logvol swap --fstype="swap" --name=centos-swap --vgname=vg1 --size=2048
+logvol / --fstype=xfs --name=centos-root --vgname=vg1 --size=5 --grow
+```
+
+`pv.01` là chuẩn nhất. Bạn có thể thay đổi thành `pv.<string>`.  
+Nhưng nếu bạn ko có dấu `.` , chẳng hạn `pv01` thì hệ thống boot OS trên Client sẽ báo lỗi không tạo được `pv01`.  
+
+
 \- Tạo profile tên `Centos7-auto`, với cấu hình như sau:  
 <img src="../images/lab-4.png" />
 
