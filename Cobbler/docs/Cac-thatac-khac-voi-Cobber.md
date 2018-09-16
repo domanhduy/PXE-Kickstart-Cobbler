@@ -115,12 +115,40 @@ http://cobbler.github.io/manuals/2.8.0/3/1/3_-_Systems.html
 <img src="../images/cac-thaotac-khac-voi-cobbler-10.png" />
 
 \- Tạo repo  
+Bạn có thể tạo mirros repo là cả repo. Dưới đây là repo ubuntu  
 <img src="../images/cac-thaotac-khac-voi-cobbler-11.png" />
+
+Hoặc bạn có tạo mirror repo là 1 phần nhỏ của repo. Dưới đây là repo Centos: `http://mirror.centos.org/centos/7.5.1804/cloud/x86_64/openstack-queens/`  
+
+<img src="../images/cac-thaotac-khac-voi-cobbler-11.1.png" />
 
 Sau khi hoàn thiện thông tin về repos, để cập nhật các gói phần mềm từ các repo của nhà cung cấp hoặc từ các bên thứ ba, thực hiện động bộ repo với hệ thống. **Click vào reposync** (khuyến cáo không nên dùng nếu cobbler server không đủ dung lượng lưu trữ tất cả các gói phần mềm từ repo chính mà định mirror).  
 <img src="../images/cac-thaotac-khac-voi-cobbler-12.png" />
 
 Lưu ý: Khi cick vào **Reposync** , hệ thống sẽ chạy tiến trình ngầm đồng bộ ngay lập tức.  
+
+\- Chỉ định client sử dụng repo. Dưới đây là ví dụ mình cấu hình Client Centos 7 sử dụng local mirror repo `OpenStack-Centos7-1804` do mình tạo ra trên Cobbler Server.  
+- Ta truy cập vào file `/var/www/cobbler/repo_mirror/OpenStack-Centos7-1804/config.repo` (mỗi khi tạo repo mirros, sẽ có file `config.repo` được tạo ra) , nội dung file như sau:  
+```
+[OpenStack-Centos7-1804]
+name=OpenStack-Centos7-1804
+baseurl=http://${http_server}/cobbler/repo_mirror/OpenStack-Centos7-1804
+enabled=1
+priority=99
+gpgcheck=0
+```
+
+- Trên Client, tạo file `/etc/yum.repos.d/OpenStack-Centos7-1804.repo` với dung như sau:  
+```
+[OpenStack-Centos7-1804]
+name=OpenStack-Centos7-1804
+baseurl=http://172.16.69.21/cobbler/repo_mirror/OpenStack-Centos7-1804
+enabled=1
+priority=99
+gpgcheck=0
+```
+
+**Chú ý**: Thay thế `${http_server}` thành địa chỉ IP của Cobbler, ở đây là `172.16.69.21` .  
 
 ## 7.6.Check log trên web
 <img src="../images/cac-thaotac-khac-voi-cobbler-13.png" />
